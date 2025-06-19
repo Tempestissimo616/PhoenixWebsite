@@ -1,0 +1,27 @@
+/* @import "tailwindcss/preflight" */
+@import "tailwindcss";
+@plugin "daisyui"{
+  themes: winter --defualt, light;
+};
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+
+
+}
+
+@layer base{
+  h1 {
+    @apply font-bold text-2xl mb-3
+  }
+}
